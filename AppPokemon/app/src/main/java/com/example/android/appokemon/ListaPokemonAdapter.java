@@ -45,7 +45,7 @@ public class ListaPokemonAdapter extends RecyclerView.Adapter<ListaPokemonAdapte
         //Usamos libreria Glide para descargar la imagen
 
         Glide.with(context)
-                    .load("http://pokeapi.co/media/sprites/pokemon/" + p.getNumOfPokemon() + ".png")
+                    .load("http://pokeapi.co/media/sprites/pokemon/" + p.getNumber() + ".png")
                     .centerCrop()
                     .crossFade()
                     .diskCacheStrategy(DiskCacheStrategy.ALL)
@@ -72,7 +72,7 @@ public class ListaPokemonAdapter extends RecyclerView.Adapter<ListaPokemonAdapte
             super(itemView);
 
             fotoImageView = (ImageView) itemView.findViewById(R.id.fotoImageView);
-            nombreTextView = itemView.findViewById(R.id.nombreTextView);
+            nombreTextView = (TextView) itemView.findViewById(R.id.nombreTextView);
         }
     }
 }
